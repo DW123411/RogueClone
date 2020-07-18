@@ -393,6 +393,19 @@ public class BoardManager : MonoBehaviour
         instance.transform.SetParent(boardHolder);
     }
 
+    void LayoutEnemies()
+    {
+        int randomRoom = Random.Range(0, 8);
+        int randomPositionX = Random.Range(bottomLeftCornersX[randomRoom] + 1, bottomLeftCornersX[randomRoom] + roomsWidth[randomRoom] - 1);
+        int randomPositionY = Random.Range(bottomLeftCornersY[randomRoom] + 1, bottomLeftCornersY[randomRoom] + roomsHeight[randomRoom] - 1);
+
+        GameObject toInstantiate = enemyTiles[Random.Range(0, doorTiles.Length)];
+
+        GameObject instance = Instantiate(toInstantiate, new Vector3(randomPositionX, randomPositionY, 0f), Quaternion.identity) as GameObject;
+
+        instance.transform.SetParent(boardHolder);
+    }
+
     Vector3 RandomPosition()
     {
         int randomIndex = Random.Range(0, gridPositions.Count);
@@ -417,6 +430,7 @@ public class BoardManager : MonoBehaviour
         BoardSetup();
         InitialiseList();
         LayoutPlayer();
+        LayoutEnemies();
         //LayoutObjectAtRandom(foodTiles, foodCount.minimum, foodCount.maximum);
         //int enemyCount = (int)Mathf.Log(level, 2f);
         //LayoutObjectAtRandom(enemyTiles, enemyCount, enemyCount);

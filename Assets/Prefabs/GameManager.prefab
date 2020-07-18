@@ -65,7 +65,8 @@ MonoBehaviour:
   - {fileID: 5905814043793820906, guid: fd363f5e0ce9d4b4ba682389078ab3a7, type: 3}
   foodTiles:
   - {fileID: 4740812170070191812, guid: 9151cb4f1c80ef640ace36d762fe4abe, type: 3}
-  enemyTiles: []
+  enemyTiles:
+  - {fileID: 8170862215331795306, guid: 720b25613889c064381c15ea05446049, type: 3}
   doorTiles:
   - {fileID: 5431760954842563244, guid: 785435158e3bfb94199341981dc6c0bb, type: 3}
   corridorTiles:
