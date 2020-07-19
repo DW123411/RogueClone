@@ -11,6 +11,7 @@ public class Enemy : MovingObject
 
     protected override void Start()
     {
+        GameManager.instance.AddEnemyToList(this);
         target = GameObject.FindGameObjectWithTag("Player").transform;
         base.Start();
     }
