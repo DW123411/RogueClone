@@ -9,13 +9,11 @@ ScriptsOnlyBuild:
     - Player
     GitHub.Unity.45.dll:
     - GitHub.Unity.ApplicationCache
-    - GitHub.Unity.BranchesCache
     - GitHub.Unity.EnvironmentCache
     - GitHub.Unity.GitAheadBehindCache
     - GitHub.Unity.GitLocksCache
     - GitHub.Unity.GitLogCache
     - GitHub.Unity.GitStatusCache
-    - GitHub.Unity.GitUserCache
     - GitHub.Unity.RepositoryInfoCache
     - GitHub.Unity.Window
     Unity.2D.Tilemap.Editor.dll:
@@ -59,11 +57,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12122}
     - Class: 114
-      Script: {instanceID: 12324}
+      Script: {instanceID: 12326}
     - Class: 114
-      Script: {instanceID: 12770}
+      Script: {instanceID: 12772}
     - Class: 114
-      Script: {instanceID: 13072}
+      Script: {instanceID: 13074}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -287,7 +285,7 @@ ScriptsOnlyBuild:
     className: TMP_Asset
   - hash:
       serializedVersion: 2
-      Hash: 764c6d047ec8a2522d25a2948c452d25
+      Hash: b57f19dd6c882154223918b205264e06
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BoardManager
@@ -297,6 +295,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: ScrollRect
+  - hash:
+      serializedVersion: 2
+      Hash: 65b3a3b9a7779d539ec75a3ceddebdba
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CameraFollow
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -537,12 +541,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 65b3a3b9a7779d539ec75a3ceddebdba
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: CameraFollow
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity

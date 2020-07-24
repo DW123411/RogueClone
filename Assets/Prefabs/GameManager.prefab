@@ -71,6 +71,8 @@ MonoBehaviour:
   - {fileID: 5431760954842563244, guid: 785435158e3bfb94199341981dc6c0bb, type: 3}
   corridorTiles:
   - {fileID: 8337059576565907435, guid: 541bc5bd6834c644a83692afe8186c72, type: 3}
+  emptyTiles:
+  - {fileID: 1334104577892981797, guid: 3a86cd6bda5805245a335391f453efbd, type: 3}
 --- !u!114 &6319585603952969788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85,5 +87,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardScript: {fileID: 0}
   playerFoodPoints: 200
+  turnDelay: 0.1
   playerHpPoints: 20
   playersTurn: 1

@@ -37,9 +37,11 @@ public class BoardManager : MonoBehaviour
     public GameObject[] enemyTiles;
     public GameObject[] doorTiles;
     public GameObject[] corridorTiles;
+    public GameObject[] emptyTiles;
 
     private Transform boardHolder;
     private List<Vector3> gridPositions = new List<Vector3>();
+    private GameObject[,] emptyVectors = new GameObject[78, 30];
     private int[] roomsWidth = new int[9];
     private int[] roomsHeight = new int[9];
     private int[] bottomLeftCornersX = new int[9];
@@ -55,6 +57,14 @@ public class BoardManager : MonoBehaviour
             for(int j = 0; j < rows; j++)
             {
                 gridPositions.Add(new Vector3(i, j, 0f));
+
+                GameObject toInstantiate = emptyTiles[Random.Range(0, doorTiles.Length)];
+
+                GameObject instance = Instantiate(toInstantiate, new Vector3(i, j, 0f), Quaternion.identity) as GameObject;
+
+                emptyVectors[i, j] = instance;
+
+                instance.transform.SetParent(boardHolder);
             }
         }
     }
@@ -163,6 +173,11 @@ public class BoardManager : MonoBehaviour
 
                             int randomXj = Random.Range(bottomLeftCornersX[j] + 1, bottomLeftCornersX[j] + roomsWidth[j] - 1);
 
+                            if (emptyVectors[randomXj, bottomLeftCornersY[j]] != null)
+                            {
+                                emptyVectors[randomXj, bottomLeftCornersY[j]].SetActive(false);
+                            }
+
                             GameObject instance = Instantiate(toInstantiate, new Vector3(randomXj, bottomLeftCornersY[j], 0f), Quaternion.identity) as GameObject;
 
                             doors[randomXj, bottomLeftCornersY[j]] = 1;
@@ -172,6 +187,11 @@ public class BoardManager : MonoBehaviour
                             toInstantiate = doorTiles[Random.Range(0, doorTiles.Length)];
 
                             int randomXi = Random.Range(bottomLeftCornersX[i] + 1, bottomLeftCornersX[i] + roomsWidth[i] - 1);
+
+                            if (emptyVectors[randomXi, bottomLeftCornersY[i] + roomsHeight[i] - 1] != null)
+                            {
+                                emptyVectors[randomXi, bottomLeftCornersY[i] + roomsHeight[i] - 1].SetActive(false);
+                            }
 
                             instance = Instantiate(toInstantiate, new Vector3(randomXi, bottomLeftCornersY[i] + roomsHeight[i] - 1, 0f), Quaternion.identity) as GameObject;
 
@@ -188,6 +208,11 @@ public class BoardManager : MonoBehaviour
 
                             int randomYi = Random.Range(bottomLeftCornersY[i] + 1, bottomLeftCornersY[i] + roomsHeight[i] - 1);
 
+                            if (emptyVectors[bottomLeftCornersX[i], randomYi] != null)
+                            {
+                                emptyVectors[bottomLeftCornersX[i], randomYi].SetActive(false);
+                            }
+
                             GameObject instance = Instantiate(toInstantiate, new Vector3(bottomLeftCornersX[i], randomYi, 0f), Quaternion.identity) as GameObject;
 
                             doors[bottomLeftCornersX[i], randomYi] = 1;
@@ -197,6 +222,11 @@ public class BoardManager : MonoBehaviour
                             toInstantiate = doorTiles[Random.Range(0, doorTiles.Length)];
 
                             int randomYj = Random.Range(bottomLeftCornersY[j] + 1, bottomLeftCornersY[j] + roomsHeight[j] - 1);
+
+                            if (emptyVectors[bottomLeftCornersX[j] + roomsWidth[j] - 1, randomYj] != null)
+                            {
+                                emptyVectors[bottomLeftCornersX[j] + roomsWidth[j] - 1, randomYj].SetActive(false);
+                            }
 
                             instance = Instantiate(toInstantiate, new Vector3(bottomLeftCornersX[j] + roomsWidth[j] - 1, randomYj, 0f), Quaternion.identity) as GameObject;
 
@@ -213,6 +243,11 @@ public class BoardManager : MonoBehaviour
 
                             int randomYj = Random.Range(bottomLeftCornersY[j] + 1, bottomLeftCornersY[j] + roomsHeight[j] - 1);
 
+                            if (emptyVectors[bottomLeftCornersX[j], randomYj] != null)
+                            {
+                                emptyVectors[bottomLeftCornersX[j], randomYj].SetActive(false);
+                            }
+
                             GameObject instance = Instantiate(toInstantiate, new Vector3(bottomLeftCornersX[j], randomYj, 0f), Quaternion.identity) as GameObject;
 
                             doors[bottomLeftCornersX[j], randomYj] = 1;
@@ -222,6 +257,11 @@ public class BoardManager : MonoBehaviour
                             toInstantiate = doorTiles[Random.Range(0, doorTiles.Length)];
 
                             int randomYi = Random.Range(bottomLeftCornersY[i] + 1, bottomLeftCornersY[i] + roomsHeight[i] - 1);
+
+                            if (emptyVectors[bottomLeftCornersX[i] + roomsWidth[i] - 1, randomYi] != null)
+                            {
+                                emptyVectors[bottomLeftCornersX[i] + roomsWidth[i] - 1, randomYi].SetActive(false);
+                            }
 
                             instance = Instantiate(toInstantiate, new Vector3(bottomLeftCornersX[i] + roomsWidth[i] - 1, randomYi, 0f), Quaternion.identity) as GameObject;
 
@@ -245,6 +285,10 @@ public class BoardManager : MonoBehaviour
                 {
                     if (doors[j, k] != 1)
                     {
+                        if(emptyVectors[j, k] != null)
+                        {
+                            emptyVectors[j, k].SetActive(false);
+                        }
                         GameObject toInstantiate = floorTiles[Random.Range(0, floorTiles.Length)];
                         if (j == bottomLeftCornersX[i] || j == roomsWidth[i] + bottomLeftCornersX[i] - 1)
                             toInstantiate = horizontalWallTiles[Random.Range(0, horizontalWallTiles.Length)];
@@ -368,6 +412,11 @@ public class BoardManager : MonoBehaviour
 
     void LayoutCorridorTile(int x, int y)
     {
+        if (emptyVectors[x, y] != null)
+        {
+            emptyVectors[x, y].SetActive(false);
+        }
+
         GameObject toInstantiate = corridorTiles[Random.Range(0, corridorTiles.Length)];
 
         GameObject instance = Instantiate(toInstantiate, new Vector3(x, y, 0f), Quaternion.identity) as GameObject;
@@ -427,8 +476,9 @@ public class BoardManager : MonoBehaviour
 
     public void SetupScene(int level)
     {
-        BoardSetup();
         InitialiseList();
+        BoardSetup();
+        //InitialiseList();
         LayoutPlayer();
         LayoutEnemies();
         //LayoutObjectAtRandom(foodTiles, foodCount.minimum, foodCount.maximum);
