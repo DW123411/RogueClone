@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class GameManager : MonoBehaviour
     private int level = 1;
     private List<Enemy> enemies;
     private bool enemiesMoving;
+    private Text levelText;
+    private GameObject levelImage;
 
     void Awake()
     {
@@ -29,14 +32,24 @@ public class GameManager : MonoBehaviour
         InitGame();
     }
 
+    void OnLevelWasLoaded(int index)
+    {
+        level++;
+        InitGame();
+    }
+
     void InitGame()
     {
+        levelText = GameObject.Find("LevelText").GetComponent<Text>();
+        levelText.text = "Level=" + level;
         enemies.Clear();
         boardScript.SetupScene(level);
     }
 
     public void GameOver()
     {
+        levelText.text = "Game Over";
+        levelImage.SetActive(true);
         enabled = false;
     }
 

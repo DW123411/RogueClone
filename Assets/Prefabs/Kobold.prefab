@@ -147,4 +147,5 @@ MonoBehaviour:
   blockingLayer:
     serializedVersion: 2
     m_Bits: 256
-  playerDamage: 1
+  playerDamage: 2
+  hp: 15

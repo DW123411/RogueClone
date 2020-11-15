@@ -13,9 +13,357 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 3
-  lastUpdatedAtString: 2020-07-24T12:52:55.545+02:00
-  initializedAtString: 2020-07-24T12:21:24.208+02:00
+  lastUpdatedAtString: 2020-11-15T15:16:40.351+01:00
+  initializedAtString: 2020-11-15T11:58:31.228+01:00
   log:
+  - commitID: 3e8205103ca83a12c2da6c5ba790ec01ec83e841
+    mergeA: 
+    mergeB: 
+    authorName: DW123411
+    authorEmail: dominikwozniak4@wp.pl
+    commitEmail: dominikwozniak4@wp.pl
+    commitName: DW123411
+    summary: "Dodanie brakuj\u0105cych kolizji."
+    description: 
+    timeString: 2020-07-24T13:00:47.000+02:00
+    commitTimeString: 2020-07-24T13:00:47.000+02:00
+    changes:
+    - path: .vs\RogueClone4Android\v16\.suo
+      fullPath: C:\Users\Lenovo\RogueClone4Android\.vs\RogueClone4Android\v16\.suo
+      projectPath: .vs\RogueClone4Android\v16\.suo
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Prefabs\Empty.prefab
+      fullPath: C:\Users\Lenovo\RogueClone4Android\Assets\Prefabs\Empty.prefab
+      projectPath: Assets\Prefabs\Empty.prefab
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Prefabs\Empty.prefab.meta
+      fullPath: C:\Users\Lenovo\RogueClone4Android\Assets\Prefabs\Empty.prefab.meta
+      projectPath: Assets\Prefabs\Empty.prefab.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Prefabs\GameManager.prefab
+      fullPath: C:\Users\Lenovo\RogueClone4Android\Assets\Prefabs\GameManager.prefab
+      projectPath: Assets\Prefabs\GameManager.prefab
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Scripts\BoardManager.cs
+      fullPath: C:\Users\Lenovo\RogueClone4Android\Assets\Scripts\BoardManager.cs
+      projectPath: Assets\Scripts\BoardManager.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Sprites\empty.png
+      fullPath: C:\Users\Lenovo\RogueClone4Android\Assets\Sprites\empty.png
+      projectPath: Assets\Sprites\empty.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Sprites\empty.png.meta
+      fullPath: C:\Users\Lenovo\RogueClone4Android\Assets\Sprites\empty.png.meta
+      projectPath: Assets\Sprites\empty.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Library\ArtifactDB
+      fullPath: C:\Users\Lenovo\RogueClone4Android\Library\ArtifactDB
+      projectPath: Library\ArtifactDB
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\Artifacts\02\022b9be17e401169af00b6fd0ed97fc9
+      fullPath: C:\Users\Lenovo\RogueClone4Android\Library\Artifacts\02\022b9be17e401169af00b6fd0ed97fc9
+      projectPath: Library\Artifacts\02\022b9be17e401169af00b6fd0ed97fc9
+      originalPath: 
+      indexStatus: 5
+      workTreeStatus: 0
+    - path: Library\Artifacts\06\067ce2a804cc9c115b46dc171f381feb
+      fullPath: C:\Users\Lenovo\RogueClone4Android\Library\Artifacts\06\067ce2a804cc9c115b46dc171f381feb
+      projectPath: Library\Artifacts\06\067ce2a804cc9c115b46dc171f381feb
+      originalPath: 
+      indexStatus: 5
+      workTreeStatus: 0
+    - path: Library\Artifacts\0e\0e801f84f854828096335018bcc387f5
+      fullPath: C:\Users\Lenovo\RogueClone4Android\Library\Artifacts\0e\0e801f84f854828096335018bcc387f5
+      projectPath: Library\Artifacts\0e\0e801f84f854828096335018bcc387f5
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Library\Artifacts\17\176e6a99aa566e404c11bd4824a13db5
+      fullPath: C:\Users\Lenovo\RogueClone4Android\Library\Artifacts\17\176e6a99aa566e404c11bd4824a13db5
+      projectPath: Library\Artifacts\17\176e6a99aa566e404c11bd4824a13db5
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Library\Artifacts\1f\1fdca59853b14d9e3d6fcf41e9822e5e
+      fullPath: C:\Users\Lenovo\RogueClone4Android\Library\Artifacts\1f\1fdca59853b14d9e3d6fcf41e9822e5e
+      projectPath: Library\Artifacts\1f\1fdca59853b14d9e3d6fcf41e9822e5e
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Library\Artifacts\24\2461722e18524db2981264841de2a1d6
+      fullPath: C:\Users\Lenovo\RogueClone4Android\Library\Artifacts\24\2461722e18524db2981264841de2a1d6
+      projectPath: Library\Artifacts\24\2461722e18524db2981264841de2a1d6
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Library\Artifacts\26\26c525b68a08b415d7cbad4e30821049
+      fullPath: C:\Users\Lenovo\RogueClone4Android\Library\Artifacts\26\26c525b68a08b415d7cbad4e30821049
+      projectPath: Library\Artifacts\26\26c525b68a08b415d7cbad4e30821049
+      originalPath: Library\Artifacts\d0\d0be3f742b3f99ef0b8f7f79e5d77d15
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Library\Artifacts\2e\2eccc959adaa63d768db05b252b5ffff
+      fullPath: C:\Users\Lenovo\RogueClone4Android\Library\Artifacts\2e\2eccc959adaa63d768db05b252b5ffff
+      projectPath: Library\Artifacts\2e\2eccc959adaa63d768db05b252b5ffff
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Library\Artifacts\34\34ed769ffaabc1202ba9dca553313515
+      fullPath: C:\Users\Lenovo\RogueClone4Android\Library\Artifacts\34\34ed769ffaabc1202ba9dca553313515
+      projectPath: Library\Artifacts\34\34ed769ffaabc1202ba9dca553313515
+      originalPath: 
+      indexStatus: 5
+      workTreeStatus: 0
+    - path: Library\Artifacts\39\392d40ce068bd286a938d8c7aede5ac8
+      fullPath: C:\Users\Lenovo\RogueClone4Android\Library\Artifacts\39\392d40ce068bd286a938d8c7aede5ac8
+      projectPath: Library\Artifacts\39\392d40ce068bd286a938d8c7aede5ac8
+      originalPath: 
+      indexStatus: 5
+      workTreeStatus: 0
+    - path: Library\Artifacts\39\396def8bd023bbe0448004415c0d5bbe
+      fullPath: C:\Users\Lenovo\RogueClone4Android\Library\Artifacts\39\396def8bd023bbe0448004415c0d5bbe
+      projectPath: Library\Artifacts\39\396def8bd023bbe0448004415c0d5bbe
+      originalPath: Library\Artifacts\52\52be62d17e66c2d3843042521fb5acd2
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Library\Artifacts\3e\3e3defadd6ec64b6a709813ec5caaf0a
+      fullPath: C:\Users\Lenovo\RogueClone4Android\Library\Artifacts\3e\3e3defadd6ec64b6a709813ec5caaf0a
+      projectPath: Library\Artifacts\3e\3e3defadd6ec64b6a709813ec5caaf0a
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Library\Artifacts\45\45e0ca131c819f2235cc81f8f2e6f12f
+      fullPath: C:\Users\Lenovo\RogueClone4Android\Library\Artifacts\45\45e0ca131c819f2235cc81f8f2e6f12f
+      projectPath: Library\Artifacts\45\45e0ca131c819f2235cc81f8f2e6f12f
+      originalPath: Library\Artifacts\c5\c5406dd3057cfa217834fe1a05d69b41
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Library\Artifacts\51\5187ea65d6656a2a3aaabe99e1700adc
+      fullPath: C:\Users\Lenovo\RogueClone4Android\Library\Artifacts\51\5187ea65d6656a2a3aaabe99e1700adc
+      projectPath: Library\Artifacts\51\5187ea65d6656a2a3aaabe99e1700adc
+      originalPath: 
+      indexStatus: 5
+      workTreeStatus: 0
+    - path: Library\Artifacts\58\589d99ce858e7e5f94930913214fb9a8
+      fullPath: C:\Users\Lenovo\RogueClone4Android\Library\Artifacts\58\589d99ce858e7e5f94930913214fb9a8
+      projectPath: Library\Artifacts\58\589d99ce858e7e5f94930913214fb9a8
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Library\Artifacts\87\8797af425b515c2914cfa38a9052cf17
+      fullPath: C:\Users\Lenovo\RogueClone4Android\Library\Artifacts\87\8797af425b515c2914cfa38a9052cf17
+      projectPath: Library\Artifacts\87\8797af425b515c2914cfa38a9052cf17
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Library\Artifacts\9b\9bab0493bd7a81e141528d056eaec0ea
+      fullPath: C:\Users\Lenovo\RogueClone4Android\Library\Artifacts\9b\9bab0493bd7a81e141528d056eaec0ea
+      projectPath: Library\Artifacts\9b\9bab0493bd7a81e141528d056eaec0ea
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Library\Artifacts\9d\9d482b5e61e80e894a06da1fb10948d7
+      fullPath: C:\Users\Lenovo\RogueClone4Android\Library\Artifacts\9d\9d482b5e61e80e894a06da1fb10948d7
+      projectPath: Library\Artifacts\9d\9d482b5e61e80e894a06da1fb10948d7
+      originalPath: 
+      indexStatus: 5
+      workTreeStatus: 0
+    - path: Library\Artifacts\b3\b3e22e8c4b93824ad5a67ec629a2a422
+      fullPath: C:\Users\Lenovo\RogueClone4Android\Library\Artifacts\b3\b3e22e8c4b93824ad5a67ec629a2a422
+      projectPath: Library\Artifacts\b3\b3e22e8c4b93824ad5a67ec629a2a422
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Library\Artifacts\c2\c270a945ada0cac2446b25a261f0d5e3
+      fullPath: C:\Users\Lenovo\RogueClone4Android\Library\Artifacts\c2\c270a945ada0cac2446b25a261f0d5e3
+      projectPath: Library\Artifacts\c2\c270a945ada0cac2446b25a261f0d5e3
+      originalPath: 
+      indexStatus: 5
+      workTreeStatus: 0
+    - path: Library\Artifacts\d3\d3f7777912d643452fc9e09a941c1412
+      fullPath: C:\Users\Lenovo\RogueClone4Android\Library\Artifacts\d3\d3f7777912d643452fc9e09a941c1412
+      projectPath: Library\Artifacts\d3\d3f7777912d643452fc9e09a941c1412
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Library\Artifacts\e3\e3c17cce3083befc4fabc9f90aacb3bd
+      fullPath: C:\Users\Lenovo\RogueClone4Android\Library\Artifacts\e3\e3c17cce3083befc4fabc9f90aacb3bd
+      projectPath: Library\Artifacts\e3\e3c17cce3083befc4fabc9f90aacb3bd
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Library\Artifacts\e7\e7d7f11701e29ff7e24f002db98322c3
+      fullPath: C:\Users\Lenovo\RogueClone4Android\Library\Artifacts\e7\e7d7f11701e29ff7e24f002db98322c3
+      projectPath: Library\Artifacts\e7\e7d7f11701e29ff7e24f002db98322c3
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Library\Artifacts\f3\f3ebd8b446c5eea18fa5f34aa610e10b
+      fullPath: C:\Users\Lenovo\RogueClone4Android\Library\Artifacts\f3\f3ebd8b446c5eea18fa5f34aa610e10b
+      projectPath: Library\Artifacts\f3\f3ebd8b446c5eea18fa5f34aa610e10b
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Library\CurrentLayout-default.dwlt
+      fullPath: C:\Users\Lenovo\RogueClone4Android\Library\CurrentLayout-default.dwlt
+      projectPath: Library\CurrentLayout-default.dwlt
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\CurrentMaximizeLayout.dwlt
+      fullPath: C:\Users\Lenovo\RogueClone4Android\Library\CurrentMaximizeLayout.dwlt
+      projectPath: Library\CurrentMaximizeLayout.dwlt
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\InspectorExpandedItems.asset
+      fullPath: C:\Users\Lenovo\RogueClone4Android\Library\InspectorExpandedItems.asset
+      projectPath: Library\InspectorExpandedItems.asset
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\LastBuild.buildreport
+      fullPath: C:\Users\Lenovo\RogueClone4Android\Library\LastBuild.buildreport
+      projectPath: Library\LastBuild.buildreport
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\PlayerDataCache\Android\Data\Managed\Assembly-CSharp.dll
+      fullPath: C:\Users\Lenovo\RogueClone4Android\Library\PlayerDataCache\Android\Data\Managed\Assembly-CSharp.dll
+      projectPath: Library\PlayerDataCache\Android\Data\Managed\Assembly-CSharp.dll
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\PlayerDataCache\Android\Data\Managed\Unity.TextMeshPro.dll
+      fullPath: C:\Users\Lenovo\RogueClone4Android\Library\PlayerDataCache\Android\Data\Managed\Unity.TextMeshPro.dll
+      projectPath: Library\PlayerDataCache\Android\Data\Managed\Unity.TextMeshPro.dll
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\PlayerDataCache\Android\Data\Managed\Unity.Timeline.dll
+      fullPath: C:\Users\Lenovo\RogueClone4Android\Library\PlayerDataCache\Android\Data\Managed\Unity.Timeline.dll
+      projectPath: Library\PlayerDataCache\Android\Data\Managed\Unity.Timeline.dll
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\PlayerDataCache\Android\Data\Managed\UnityEngine.UI.dll
+      fullPath: C:\Users\Lenovo\RogueClone4Android\Library\PlayerDataCache\Android\Data\Managed\UnityEngine.UI.dll
+      projectPath: Library\PlayerDataCache\Android\Data\Managed\UnityEngine.UI.dll
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\PlayerDataCache\Android\Data\boot.config
+      fullPath: C:\Users\Lenovo\RogueClone4Android\Library\PlayerDataCache\Android\Data\boot.config
+      projectPath: Library\PlayerDataCache\Android\Data\boot.config
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\PlayerDataCache\Android\Data\data.unity3d
+      fullPath: C:\Users\Lenovo\RogueClone4Android\Library\PlayerDataCache\Android\Data\data.unity3d
+      projectPath: Library\PlayerDataCache\Android\Data\data.unity3d
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\PlayerDataCache\Android\ScriptsOnlyCache.yaml
+      fullPath: C:\Users\Lenovo\RogueClone4Android\Library\PlayerDataCache\Android\ScriptsOnlyCache.yaml
+      projectPath: Library\PlayerDataCache\Android\ScriptsOnlyCache.yaml
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\ScriptAssemblies\Assembly-CSharp.dll
+      fullPath: C:\Users\Lenovo\RogueClone4Android\Library\ScriptAssemblies\Assembly-CSharp.dll
+      projectPath: Library\ScriptAssemblies\Assembly-CSharp.dll
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\ScriptAssemblies\Assembly-CSharp.pdb
+      fullPath: C:\Users\Lenovo\RogueClone4Android\Library\ScriptAssemblies\Assembly-CSharp.pdb
+      projectPath: Library\ScriptAssemblies\Assembly-CSharp.pdb
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\SourceAssetDB
+      fullPath: C:\Users\Lenovo\RogueClone4Android\Library\SourceAssetDB
+      projectPath: Library\SourceAssetDB
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\gfu\cache\gitlocks.yaml
+      fullPath: C:\Users\Lenovo\RogueClone4Android\Library\gfu\cache\gitlocks.yaml
+      projectPath: Library\gfu\cache\gitlocks.yaml
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\gfu\cache\gitlog.yaml
+      fullPath: C:\Users\Lenovo\RogueClone4Android\Library\gfu\cache\gitlog.yaml
+      projectPath: Library\gfu\cache\gitlog.yaml
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\gfu\cache\gitstatusentries.yaml
+      fullPath: C:\Users\Lenovo\RogueClone4Android\Library\gfu\cache\gitstatusentries.yaml
+      projectPath: Library\gfu\cache\gitstatusentries.yaml
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\gfu\cache\gittrackingstatus.yaml
+      fullPath: C:\Users\Lenovo\RogueClone4Android\Library\gfu\cache\gittrackingstatus.yaml
+      projectPath: Library\gfu\cache\gittrackingstatus.yaml
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\gfu\cache\repoinfo.yaml
+      fullPath: C:\Users\Lenovo\RogueClone4Android\Library\gfu\cache\repoinfo.yaml
+      projectPath: Library\gfu\cache\repoinfo.yaml
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\shadercompiler-UnityShaderCompiler.exe0.log
+      fullPath: C:\Users\Lenovo\RogueClone4Android\Library\shadercompiler-UnityShaderCompiler.exe0.log
+      projectPath: Library\shadercompiler-UnityShaderCompiler.exe0.log
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\shadercompiler-UnityShaderCompiler.exe1.log
+      fullPath: C:\Users\Lenovo\RogueClone4Android\Library\shadercompiler-UnityShaderCompiler.exe1.log
+      projectPath: Library\shadercompiler-UnityShaderCompiler.exe1.log
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\shadercompiler-UnityShaderCompiler.exe5.log
+      fullPath: C:\Users\Lenovo\RogueClone4Android\Library\shadercompiler-UnityShaderCompiler.exe5.log
+      projectPath: Library\shadercompiler-UnityShaderCompiler.exe5.log
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\shadercompiler-UnityShaderCompiler.exe7.log
+      fullPath: C:\Users\Lenovo\RogueClone4Android\Library\shadercompiler-UnityShaderCompiler.exe7.log
+      projectPath: Library\shadercompiler-UnityShaderCompiler.exe7.log
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: ProjectSettings\ProjectSettings.asset
+      fullPath: C:\Users\Lenovo\RogueClone4Android\ProjectSettings\ProjectSettings.asset
+      projectPath: ProjectSettings\ProjectSettings.asset
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
   - commitID: f1996c6ee6ebf70a147338b62914e7e5e19d5bb3
     mergeA: 
     mergeB: 

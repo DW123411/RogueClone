@@ -28,6 +28,14 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
+    UnityEngine.UI.dll:
+    - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
+    - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.Image
+    - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/SampleScene.unity:
     - Class: 1
@@ -51,7 +59,15 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
+      Script: {instanceID: 11190}
+    - Class: 114
+      Script: {instanceID: 11364}
+    - Class: 114
+      Script: {instanceID: 11406}
+    - Class: 114
       Script: {instanceID: 11734}
+    - Class: 114
+      Script: {instanceID: 11830}
     - Class: 114
       Script: {instanceID: 11854}
     - Class: 114
@@ -59,10 +75,18 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12326}
     - Class: 114
+      Script: {instanceID: 12342}
+    - Class: 114
       Script: {instanceID: 12772}
     - Class: 114
+      Script: {instanceID: 12862}
+    - Class: 114
       Script: {instanceID: 13074}
+    - Class: 114
+      Script: {instanceID: 13258}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -71,6 +95,12 @@ ScriptsOnlyBuild:
     - Class: 212
       Script: {instanceID: 0}
     - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -231,7 +261,7 @@ ScriptsOnlyBuild:
     className: Mask
   - hash:
       serializedVersion: 2
-      Hash: d1865dd95d216d5ba9d1ad7b1483e8aa
+      Hash: c088eb82019913148879f6499d916018
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player
@@ -441,7 +471,7 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
-      Hash: b754feb0604fa3d71c6b26a4b32ced77
+      Hash: cf2319349b30fe19563e957cfbd94ecf
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Enemy
@@ -544,4 +574,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/Lenovo/Desktop/RogueClone4Android.apk
+  playerPath: C:/Users/Lenovo/Desktop/RogueClone4Android_v02.apk

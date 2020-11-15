@@ -67,6 +67,7 @@ MonoBehaviour:
   - {fileID: 4740812170070191812, guid: 9151cb4f1c80ef640ace36d762fe4abe, type: 3}
   enemyTiles:
   - {fileID: 8170862215331795306, guid: 720b25613889c064381c15ea05446049, type: 3}
+  - {fileID: 7077803688203392960, guid: e5e72411577f88044b8e627c114aae8d, type: 3}
   doorTiles:
   - {fileID: 5431760954842563244, guid: 785435158e3bfb94199341981dc6c0bb, type: 3}
   corridorTiles:

@@ -1,18 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MovingObject
 {
     public int playerDamage;
+    public int hp;
 
     private Transform target;
     private bool skipMove;
+    private Text message;
 
     protected override void Start()
     {
         GameManager.instance.AddEnemyToList(this);
         target = GameObject.FindGameObjectWithTag("Player").transform;
+        message = GameObject.Find("MessagesText").GetComponent<Text>();
+        message.text = "";
         base.Start();
     }
 
@@ -41,7 +46,25 @@ public class Enemy : MovingObject
 
     protected override void OnCantMove<T>(T component)
     {
-        Player hitPlayer = component as Player;
-        hitPlayer.loseHp(playerDamage);
+        if (Random.value >= 0.5f)
+        {
+            Player hitPlayer = component as Player;
+            hitPlayer.loseHp(Random.Range(2, playerDamage));
+            message.text = "Enemy hits player.";
+        }
+        else
+        {
+            message.text = "Enemy misses.";
+        }
+    }
+
+    public void loseHp(int loss)
+    {
+        hp -= loss;
+        if (hp <= 0)
+        {
+            message.text = "Player killed enemy.";
+            gameObject.SetActive(false);
+        }
     }
 }
