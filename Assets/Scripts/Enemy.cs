@@ -7,17 +7,22 @@ public class Enemy : MovingObject
 {
     public int playerDamage;
     public int hp;
+    public int directionX;
+    public int directionY;
 
     private Transform target;
     private bool skipMove;
     private Text message;
+    private Text message2;
 
     protected override void Start()
     {
         GameManager.instance.AddEnemyToList(this);
         target = GameObject.FindGameObjectWithTag("Player").transform;
-        message = GameObject.Find("MessagesText").GetComponent<Text>();
+        message = GameObject.Find("MessagesText1").GetComponent<Text>();
         message.text = "";
+        message2 = GameObject.Find("MessageText2").GetComponent<Text>();
+        message2.text = "";
         base.Start();
     }
 
@@ -50,11 +55,13 @@ public class Enemy : MovingObject
         {
             Player hitPlayer = component as Player;
             hitPlayer.loseHp(Random.Range(2, playerDamage));
-            message.text = "Enemy hits player.";
+            message.text = message2.text;
+            message2.text = "Enemy hits player.";
         }
         else
         {
-            message.text = "Enemy misses.";
+            message.text = message2.text;
+            message2.text = "Enemy misses.";
         }
     }
 
@@ -63,8 +70,22 @@ public class Enemy : MovingObject
         hp -= loss;
         if (hp <= 0)
         {
-            message.text = "Player killed enemy.";
+            message.text = message2.text;
+            message2.text = "Player killed enemy.";
             gameObject.SetActive(false);
+            GameManager.instance.removeEnemy(this);
         }
+    }
+
+    public void testMoveEnemy()
+    {
+        int xDir = 0;
+        int yDir = 0;
+        if (Mathf.Abs(target.position.x - transform.position.x) < float.Epsilon)
+            yDir = target.position.y > transform.position.y ? 1 : -1;
+        else
+            xDir = target.position.x > transform.position.x ? 1 : -1;
+        directionX = xDir;
+        directionY = yDir;
     }
 }

@@ -20,8 +20,8 @@ public class Player : MovingObject
     private Text foodText;
     private GameObject exitButton;
     private Text message;
+    private Text message2;
 
-    // Start is called before the first frame update
     protected override void Start()
     {
         food = GameManager.instance.playerFoodPoints;
@@ -31,8 +31,10 @@ public class Player : MovingObject
         foodText = GameObject.Find("FoodText").GetComponent<Text>();
         foodText.text = "Food=" + food;
         exitButton = GameObject.Find("ExitButton");
-        message = GameObject.Find("MessagesText").GetComponent<Text>();
+        message = GameObject.Find("MessagesText1").GetComponent<Text>();
         message.text = "";
+        message2 = GameObject.Find("MessageText2").GetComponent<Text>();
+        message2.text = "";
 
         base.Start();
     }
@@ -43,7 +45,6 @@ public class Player : MovingObject
         GameManager.instance.playerHpPoints = hp;
     }
 
-    // Update is called once per frame
     void Update()
     {
         hpText.text = "HP=" + hp + "/20";
@@ -54,15 +55,7 @@ public class Player : MovingObject
         int horizontal = 0;
         int vertical = 0;
 
-    #if UNITY_EDITOR || UNITY_STANDALONE || UNITY_WEBPLAYER
-
-        horizontal = (int)Input.GetAxisRaw("Horizontal");
-        vertical = (int)Input.GetAxisRaw("Vertical");
-
-        if (horizontal != 0)
-            vertical = 0;
-
-        if(!onExit)
+        if (!onExit)
         {
             exitButton.SetActive(false);
         }
@@ -70,6 +63,14 @@ public class Player : MovingObject
         {
             exitButton.SetActive(true);
         }
+
+    #if UNITY_EDITOR || UNITY_STANDALONE || UNITY_WEBPLAYER
+
+        horizontal = (int)Input.GetAxisRaw("Horizontal");
+        vertical = (int)Input.GetAxisRaw("Vertical");
+
+        if (horizontal != 0)
+            vertical = 0;
 
     #else
 
@@ -83,14 +84,40 @@ public class Player : MovingObject
             }
             else if (myTouch.phase == TouchPhase.Ended && touchOrigin.x >= 0)
             {
-                Vector2 touchEnd = myTouch.position;
+                /*Vector2 touchEnd = myTouch.position;
                 float x = touchEnd.x - touchOrigin.x;
                 float y = touchEnd.y - touchOrigin.y;
                 touchOrigin.x = -1;
                 if (Mathf.Abs(x) > Mathf.Abs(y))
                     horizontal = x > 0 ? 1 : -1;
                 else
-                    vertical = y > 0 ? 1 : -1;
+                    vertical = y > 0 ? 1 : -1;*/
+                float halfScreenHeight = Screen.height / 2;
+                float halfScreenWidth = Screen.width / 2;
+                float verticalDiff = Math.Abs(halfScreenHeight - touchOrigin.y);
+                float horizontalDiff = Math.Abs(halfScreenWidth - touchOrigin.x);
+                if (verticalDiff >= horizontalDiff)
+                {
+                    if (touchOrigin.y <= halfScreenHeight)
+                    {
+                        vertical = -1;
+                    }
+                    else
+                    {
+                        vertical = 1;
+                    }
+                }
+                else
+                {
+                    if(touchOrigin.x <= halfScreenWidth)
+                    {
+                        horizontal = -1;
+                    }
+                    else
+                    {
+                        horizontal = 1;
+                    }
+                }
             }
         }
 
@@ -123,7 +150,8 @@ public class Player : MovingObject
         {
             food += foodPerFood;
             hp += hpPerFood;
-            message.text = "Picked up food";
+            message.text = message2.text; 
+            message2.text = "Picked up food.";
             if (hp > 20)
             {
                 hp = 20;
@@ -146,7 +174,11 @@ public class Player : MovingObject
         hitDoor.openDoor();*/
         Enemy hitEnemy = component as Enemy;
         hitEnemy.loseHp(enemyDamage);
-        message.text = "Player hits enemy.";
+        if (hitEnemy.isActiveAndEnabled)
+        {
+            message.text = message2.text;
+            message2.text = "Player hits enemy.";
+        }
     }
 
     private void Restart()
@@ -163,6 +195,10 @@ public class Player : MovingObject
     private void CheckIfGameOver()
     {
         if (hp <= 0)
+        {
+            message.text = message2.text;
+            message2.text = "Player died.";
             GameManager.instance.GameOver();
+        }
     }
 }

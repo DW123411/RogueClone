@@ -2,13 +2,16 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - BoardManager
+    - CameraFollow
     - Door
     - Enemy
+    - ExitButton
     - GameManager
     - Loader
     - Player
     GitHub.Unity.45.dll:
     - GitHub.Unity.ApplicationCache
+    - GitHub.Unity.BranchesCache
     - GitHub.Unity.EnvironmentCache
     - GitHub.Unity.GitAheadBehindCache
     - GitHub.Unity.GitLocksCache
@@ -65,25 +68,29 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11406}
     - Class: 114
-      Script: {instanceID: 11734}
+      Script: {instanceID: 11736}
     - Class: 114
-      Script: {instanceID: 11830}
+      Script: {instanceID: 11832}
     - Class: 114
-      Script: {instanceID: 11854}
+      Script: {instanceID: 11856}
     - Class: 114
-      Script: {instanceID: 12122}
+      Script: {instanceID: 12124}
     - Class: 114
-      Script: {instanceID: 12326}
+      Script: {instanceID: 12148}
     - Class: 114
-      Script: {instanceID: 12342}
+      Script: {instanceID: 12328}
     - Class: 114
-      Script: {instanceID: 12772}
+      Script: {instanceID: 12344}
     - Class: 114
-      Script: {instanceID: 12862}
+      Script: {instanceID: 12774}
     - Class: 114
-      Script: {instanceID: 13074}
+      Script: {instanceID: 12864}
     - Class: 114
-      Script: {instanceID: 13258}
+      Script: {instanceID: 13018}
+    - Class: 114
+      Script: {instanceID: 13078}
+    - Class: 114
+      Script: {instanceID: 13262}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -261,7 +268,7 @@ ScriptsOnlyBuild:
     className: Mask
   - hash:
       serializedVersion: 2
-      Hash: c088eb82019913148879f6499d916018
+      Hash: 902607ee9174418edc3e81199579f908
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player
@@ -327,7 +334,7 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
-      Hash: 65b3a3b9a7779d539ec75a3ceddebdba
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CameraFollow
@@ -465,6 +472,12 @@ ScriptsOnlyBuild:
     className: MarkerTrack
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ExitButton
+  - hash:
+      serializedVersion: 2
       Hash: d791aa6007fa3640be1164ea75bb087d
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -574,4 +587,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/Lenovo/Desktop/RogueClone4Android_v02.apk
+  playerPath: C:/Users/Lenovo/Desktop/RogueClone4Android_v03.apk

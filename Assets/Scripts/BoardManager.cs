@@ -308,8 +308,10 @@ public class BoardManager : MonoBehaviour
 
     void LayoutCorridor(int srcX, int srcY, int destX, int destY, int srcRoom, int destRoom)
     {
+        //Jeśli pomieszczenie źródłowe jest nad pomieszczeniem docelowym
         if ((srcRoom >= 3 && srcRoom <= 5 && destRoom < 3) || (srcRoom >= 6 && srcRoom <= 8 && destRoom < 6))
         {
+            //Jeśli drzwi pomieszczenia źrodłowego są na prawo od drzwi pomieszczenia docelowego
             if(srcX - destX > 0)
             {
                 for (int i = srcX; i > destX; i--)
@@ -325,6 +327,7 @@ public class BoardManager : MonoBehaviour
                 }
             }
 
+            //Jeśli drzwi pomieszczenia docelowego są nad drzwiami pomieszczenia docelowgo
             if (srcY - destY > 0)
             {
                 for (int i = srcY - 1; i > destY; i--)
