@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     public float turnDelay = 0.1f;
     public int playerHpPoints = 20;
     [HideInInspector] public bool playersTurn = true;
+    public float[] reservedFieldX;
+    public float[] reservedFieldY;
 
     private int level = 1;
     private List<Enemy> enemies;
@@ -67,8 +69,10 @@ public class GameManager : MonoBehaviour
 
     IEnumerator MoveEnemies()
     {
+        reserveFields();
+
         enemiesMoving = true;
-        yield return new WaitForSeconds(turnDelay);
+        yield return new WaitForSeconds(turnDelay + 0.05f);
 
         if (enemies.Count == 0)
         {
@@ -77,11 +81,47 @@ public class GameManager : MonoBehaviour
 
         for (int i = 0; i < enemies.Count; i++)
         {
-            enemies[i].MoveEnemy();
-            yield return new WaitForSeconds(enemies[i].moveTime);
+            //yield return new WaitForSeconds(0.03f);
+            if (checkReservedFields(i, enemies[i].transform.position.x + enemies[i].directionX, enemies[i].transform.position.y + enemies[i].directionY))
+            {
+                enemies[i].MoveEnemy();
+            }
+            //yield return new WaitForSeconds(enemies[i].moveTime);
         }
+
+        yield return new WaitForSeconds(turnDelay * 2f);
 
         playersTurn = true;
         enemiesMoving = false;
+    }
+
+    public void removeEnemy(Enemy enemy)
+    {
+        enemies.Remove(enemy);
+    }
+
+    public void reserveFields()
+    {
+        reservedFieldX = new float[enemies.Count];
+        reservedFieldY = new float[enemies.Count];
+
+        for (int i = 0; i < reservedFieldX.Length; i++)
+        {
+            enemies[i].testMoveEnemy();
+            reservedFieldX[i] = enemies[i].transform.position.x + enemies[i].directionX;
+            reservedFieldY[i] = enemies[i].transform.position.y + enemies[i].directionY;
+        }
+    }
+
+    public bool checkReservedFields(int enemy, float positionX, float positionY)
+    {
+        for (int i = 0; i < reservedFieldX.Length; i++)
+        {
+            if(i != enemy && positionX.Equals(reservedFieldX[i]) && positionY.Equals(reservedFieldY[i]))
+            {
+                return false;
+            }
+        }
+        return true;
     }
 }

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 230366850596967394}
   - component: {fileID: 1971555721759427617}
   - component: {fileID: -2272437486421428464}
+  - component: {fileID: -329919682976246325}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -147,5 +148,20 @@ MonoBehaviour:
   blockingLayer:
     serializedVersion: 2
     m_Bits: 256
-  foodPerPoints: 150
+  foodPerFood: 150
+  hpPerFood: 5
+  enemyDamage: 5
   restartLevelDelay: 1
+  onExit: 0
+--- !u!114 &-329919682976246325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1602014293088293608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23c2fbf61a819b748bfa31d41bd7bfed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
